@@ -6,6 +6,9 @@
 # Assumes all source and header files are in one directory and each class is defined in a
 # a source and header file with the same name as the class.
 #
+# Only pairs headers and sources. If a source depends on multiple headers, and one of the 
+# headers change, the code MAY not build. Fixed with a `make clean all`
+#
 
 ROOTCINT ?= rootcint
 ROOTCONFIG ?= root-config
@@ -17,7 +20,7 @@ RM = rm -vf
 
 ####################
 #
-# The classes - sources and headers will be generated from these names
+# The classes - source and header filenames will be generated from these
 #
 #####
 CLASSNAMES = test1 test2
