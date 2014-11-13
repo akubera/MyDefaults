@@ -10,14 +10,13 @@
 class Test1 : public TObject {
 public:
   Test1();
+  virtual ~Test1();
 
 protected:
   int _x;
 
-#ifdef __ROOT__
-  ClassDef(Test1, 0);
-#endif
 
+ClassDef(Test1, 0);
 };
 
 #endif

@@ -23,7 +23,7 @@ RM = rm -vf
 # The classes - source and header filenames will be generated from these
 #
 #####
-CLASSNAMES = test1 test2
+CLASSNAMES = Test1 Test2
 
 ##########
 #

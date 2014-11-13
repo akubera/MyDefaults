@@ -14,10 +14,8 @@ public:
 protected:
   int _x;
 
-#ifdef __ROOT__
-  ClassDef(Test2, 0);
-#endif
 
+ClassDef(Test2, 0);
 };
 
 #endif

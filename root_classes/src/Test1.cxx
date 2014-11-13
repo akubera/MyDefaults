@@ -18,3 +18,7 @@ Test1::Test1():
   std::cout << "[Test1::Test1]\n";
 }
 
+Test1::~Test1()
+{
+  /** No-Op **/
+}
