@@ -8,12 +8,23 @@
  */
  
 #include <cassert>
- 
+#include <iostream>
+
+#include <TSystem.h>
+#include <TClass.h>
+
+#ifndef __CINT__
+#include "Test1.h"
+#include "Test2.h"
+#endif
+
+using namespace std;
+
 void
 run()
 {
-  gInterpreter->Load("MyLib");
-  gROOT
+  gSystem->Load("MyLib");
+
   Test1 t1;
   
   Test2 t2;
@@ -26,3 +37,14 @@ run()
   
   cout << "Done.";
 }
+
+//
+// Now run.C is compilable
+//
+#if !defined(__CINT__) && !defined(__ROOTCLING__)
+int main()
+{
+  run();
+  return 0;
+}
+#endif
